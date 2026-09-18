@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>작문학회 학술발표대회 자료 요약</title>
+  <meta name="description" content="기조강연 1편과 발표문 12편의 핵심 내용 및 원문 링크를 정리한 요약 페이지">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-kopubworld@1.0/dotum.min.css">
+  <style>
+    :root {
+      --ink: #15213d;
+      --muted: #5f6b82;
+      --paper: #f8f6f1;
+      --panel: #ffffff;
+      --navy: #16254a;
+      --blue: #2e5bff;
+      --aqua: #1b9aaa;
+      --gold: #f2b441;
+      --coral: #ef6f6c;
+      --green: #2f8f6b;
+      --line: #dfe4ed;
+      --shadow: none;
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--ink);
+      font-family: "KoPubWorld Dotum", "KoPubWorld돋움체", "KoPubDotum", "Malgun Gothic", sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.62;
+      word-break: keep-all;
+    }
+    a { color: inherit; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: auto;
+      color: var(--ink);
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      display: none;
+      pointer-events: none;
+    }
+    .hero-inner, main, .footer-inner { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    .hero-inner { position: relative; z-index: 1; padding: 28px 0 22px; }
+    .eyebrow { display: none; }
+    h1 { max-width: 910px; margin: 0; font-size: 13pt; line-height: 1.35; letter-spacing: -.015em; }
+    .hero-copy { max-width: 800px; margin: 8px 0 0; color: var(--muted); font-size: 10.5pt; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 30px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 45px; padding: 10px 16px; border: 1px solid transparent; border-radius: 999px; text-decoration: none; font-weight: 800; transition: .18s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button.primary { background: #fff; color: var(--navy); }
+    .button.ghost { border-color: rgba(255,255,255,.44); color: #fff; background: rgba(255,255,255,.07); }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; margin-top: 38px; }
+    .stat { padding: 15px 17px; border: 1px solid rgba(255,255,255,.18); border-radius: 15px; background: rgba(255,255,255,.08); backdrop-filter: blur(8px); }
+    .stat strong { display: block; font-size: 13pt; line-height: 1.2; }
+    .stat span { color: #cfd9ee; font-size: 10pt; }
+    .sticky-nav { position: sticky; top: 0; z-index: 20; background: rgba(248,246,241,.93); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
+    .nav-inner { width: min(1180px, calc(100% - 40px)); margin: 0 auto; display: flex; gap: 8px; overflow-x: auto; padding: 10px 0; }
+    .nav-inner a { white-space: nowrap; padding: 7px 11px; border-radius: 999px; text-decoration: none; color: #42506b; font-size: 10pt; font-weight: 700; }
+    .nav-inner a:hover { background: #e8edfa; color: var(--blue); }
+    main { padding: 32px 0 54px; }
+    section { scroll-margin-top: 72px; margin-top: 38px; }
+    section:first-child { margin-top: 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
+    .section-head h2 { margin: 0; font-size: 13pt; letter-spacing: -.015em; line-height: 1.35; }
+    .section-head p { max-width: 590px; margin: 0; color: var(--muted); }
+    .lead-panel { display: grid; grid-template-columns: 1.3fr .7fr; gap: 18px; }
+    .panel { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); box-shadow: var(--shadow); }
+    .summary { padding: 22px; }
+    .summary h3 { margin: 0 0 12px; font-size: 12pt; }
+    .summary .thesis { margin: 0 0 17px; font-size: 11pt; font-weight: 700; color: #20366e; }
+    .summary ul { padding-left: 1.2rem; margin: 0; }
+    .summary li + li { margin-top: 8px; }
+    .callout { padding: 26px; background: linear-gradient(145deg, #fff7df, #fff); }
+    .callout .label { display: inline-block; margin-bottom: 8px; color: #815d08; font-size: 10pt; font-weight: 700; }
+    .callout h3 { margin: 0 0 10px; }
+    .callout p { margin: 0; color: #635a46; }
+    .theme-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+    .theme { min-height: 180px; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+    .theme b { display: block; margin-bottom: 9px; color: var(--blue); }
+    .theme p { margin: 0; color: var(--muted); font-size: 10pt; }
+    .keynote { display: grid; grid-template-columns: .92fr 1.08fr; overflow: hidden; }
+    .keynote-side { padding: 29px; color: #fff; background: linear-gradient(150deg, #133151, #1b7f8b); }
+    .keynote-side h3 { margin: 0 0 10px; font-size: 12pt; line-height: 1.4; }
+    .keynote-side p { margin: 0; color: #d6f5f3; }
+    .keynote-main { padding: 29px; }
+    .metric-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 18px 0; }
+    .metric { padding: 14px; border-radius: 13px; background: #f0f6f7; }
+    .metric strong { display: block; color: #135c68; font-size: 12pt; }
+    .keynote-main ol { margin: 12px 0 0; padding-left: 1.25rem; }
+    .toolbar { display: grid; grid-template-columns: 1fr 220px; gap: 10px; margin: 0 0 18px; }
+    .toolbar input, .toolbar select { width: 100%; min-height: 44px; padding: 10px 13px; border: 1px solid #cfd6e5; border-radius: 11px; background: #fff; color: var(--ink); font: inherit; }
+    .papers { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+    .paper-card { display: flex; flex-direction: column; padding: 20px; border: 1px solid var(--line); border-radius: 10px; background: #fff; box-shadow: none; }
+    .paper-card.hidden { display: none; }
+    .paper-top { display: flex; justify-content: space-between; gap: 13px; align-items: flex-start; }
+    .paper-card h3 { margin: 7px 0 4px; font-size: 11pt; line-height: 1.45; }
+    .authors { margin: 0; color: var(--muted); font-size: 10pt; }
+    .badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 13px 0; }
+    .badge { display: inline-flex; padding: 4px 8px; border-radius: 999px; background: #eef2fb; color: #3d4d70; font-size: 10pt; font-weight: 700; }
+    .badge.empirical { background: #e8f6ef; color: #1f7053; }
+    .badge.design { background: #fff2d8; color: #7a5706; }
+    .badge.progress { background: #ffe8e6; color: #9a3f3c; }
+    .paper-card dl { display: grid; grid-template-columns: 76px 1fr; gap: 8px 10px; margin: 0; font-size: 10pt; }
+    .paper-card dt { color: #334c83; font-weight: 850; }
+    .paper-card dd { margin: 0; color: #3e4a63; }
+    details { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 11px; }
+    details summary { cursor: pointer; font-weight: 850; color: #30487d; }
+    details p, details ul { color: var(--muted); font-size: 10pt; }
+    details ul { padding-left: 1.1rem; }
+    .paper-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 17px; }
+    .paper-actions a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 11px; border-radius: 8px; text-decoration: none; font-size: 10pt; font-weight: 700; }
+    .download { color: #fff; background: var(--blue); }
+    .drive { color: #2d477c; background: #edf2ff; }
+    .matrix-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+    table { width: 100%; border-collapse: collapse; min-width: 900px; }
+    th, td { padding: 12px 13px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 10pt; }
+    th { position: sticky; top: 0; background: #edf1f8; color: #34466a; }
+    tr:last-child td { border-bottom: 0; }
+    .agenda { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .agenda .panel { padding: 24px; }
+    .agenda h3 { margin-top: 0; }
+    .agenda ol, .agenda ul { padding-left: 1.25rem; }
+    .agenda li + li { margin-top: 8px; }
+    .note { margin-top: 16px; padding: 15px 17px; border-left: 4px solid var(--gold); border-radius: 8px; background: #fffaf0; color: #5c543f; }
+    footer { color: var(--muted); background: #fff; border-top: 1px solid var(--line); }
+    .footer-inner { padding: 20px 0; }
+    .footer-inner p { margin: 4px 0; }
+    .small { font-size: 10pt; color: var(--muted); }
+    @media (max-width: 960px) {
+      .stats { grid-template-columns: repeat(2,1fr); }
+      .lead-panel, .keynote, .agenda { grid-template-columns: 1fr; }
+      .theme-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 720px) {
+      .hero-inner, main, .footer-inner, .nav-inner { width: min(100% - 24px, 1180px); }
+      .hero-inner { padding-top: 24px; }
+      .papers, .toolbar { grid-template-columns: 1fr; }
+      .theme-grid { grid-template-columns: 1fr; }
+      .paper-card dl { grid-template-columns: 1fr; gap: 2px; }
+      .paper-card dd { margin-bottom: 7px; }
+      .metric-row { grid-template-columns: 1fr; }
+    }
+    @media print {
+      .sticky-nav, .toolbar, .hero-actions, .paper-actions { display: none !important; }
+      body { background: #fff; font-size: 10pt; }
+      .hero { min-height: auto; color: #111; background: #fff; }
+      .hero-copy, .stat span { color: #333; }
+      .stat { border-color: #bbb; }
+      .panel, .paper-card { box-shadow: none; break-inside: avoid; }
+      .papers { display: block; }
+      .paper-card { margin-bottom: 10px; }
+      details { display: block; }
+      details > * { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>작문학회 학술발표대회 자료 요약</h1>
+      <p class="hero-copy">기조강연 1편과 발표문 12편의 핵심 내용과 원문 링크를 정리한 페이지입니다.</p>
+    </div>
+  </header>
+
+  <nav class="sticky-nav" aria-label="보고서 목차">
+    <div class="nav-inner">
+      <a href="#overview">요약</a>
+      <a href="#themes">공통 주제</a>
+      <a href="#keynote">기조강연</a>
+      <a href="#papers">발표문 12편</a>
+      <a href="#matrix">근거 비교</a>
+      <a href="#downloads">다운로드 안내</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="overview">
+      <div class="section-head">
+        <div><h2>자료 개요</h2></div>
+        <p>쓰기 교육은 지식 전달을 넘어 학습자가 경험과 타자의 관점을 비교하고, 선택의 이유를 설명하며, 결과에 책임지는 과정으로 이동하고 있다.</p>
+      </div>
+      <div class="lead-panel">
+        <article class="panel summary">
+          <h3>통합 해석</h3>
+          <p class="thesis">기조강연의 ‘접촉에서 공동탐구로’라는 전환은 12편의 연구를 관통한다.</p>
+          <ul>
+            <li><b>교류와 다문화:</b> 다른 문화를 아는 수준에서 자기 기준을 성찰하고 관점을 협상하는 수준으로 이동한다.</li>
+            <li><b>AI와 글쓰기:</b> AI 산출물의 유창성보다 인간 학습자의 선택, 검증, 설명, 책임이 핵심 평가 대상이 된다.</li>
+            <li><b>성찰과 정체성:</b> 글쓰기는 경험을 나열하는 활동이 아니라 과거·현재·미래의 관계를 다시 구성하는 장치로 제안된다.</li>
+            <li><b>시민성과 타자:</b> 정답 입장에 도달시키는 대신 이견이 만들어지는 조건과 선택의 결과를 검토하도록 설계한다.</li>
+            <li><b>평가:</b> 완성된 결과물만으로는 학습자의 판단을 확인하기 어렵다. 초안, 대화 기록, 수정 이유, 공동저술 흔적이 학습증거가 된다.</li>
+          </ul>
+        </article>
+        <aside class="panel callout">
+          <span class="label">READING CAUTION</span>
+          <h3>결과가 나온 연구와 설계안을 구분해야 한다</h3>
+          <p>AI 문화교육 모형과 LLM 요약 모형은 현재 단계에서 초기 설계 또는 후속 검증 계획을 제시한다. 어린이 헌법·이물 설화 연구도 개념 분석과 수업 모형 제안이 중심이다. 이 자료들은 교육 효과의 실증 근거라기보다 검증할 가설과 설계 언어를 제공한다.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="themes">
+      <div class="section-head"><div><h2>공통 주제</h2></div></div>
+      <div class="theme-grid">
+        <article class="theme"><b>01 · 관점 협상</b><p>문화 접촉, 설화 읽기, 헌법 토론을 ‘다른 관점의 이유를 재구성하는 일’로 다룬다.</p></article>
+        <article class="theme"><b>02 · 저자성·행위주체성</b><p>학습자가 무엇을 선택했고 왜 선택했는지, 결과를 설명하고 책임질 수 있는지가 핵심이다.</p></article>
+        <article class="theme"><b>03 · 과정의 증거화</b><p>요약 비교, 수정 흔적, 성찰일지, 공동저술 기록을 학습 변화의 증거로 남긴다.</p></article>
+        <article class="theme"><b>04 · AI의 재위치</b><p>AI를 정답 생산자가 아니라 표현 비계, 선택지 확장 도구, 검토할 타자의 가설로 제한한다.</p></article>
+        <article class="theme"><b>05 · 경험의 재서사화</b><p>부정적 경험과 문화충돌을 삭제하지 않고 새로운 의미와 관계의 가능성으로 다시 쓴다.</p></article>
+      </div>
+    </section>
+
+    <section id="keynote">
+      <div class="section-head"><div><h2>기조강연</h2></div></div>
+      <article class="panel keynote">
+        <div class="keynote-side">
+          <p class="eyebrow">기조강연 · 이승진</p>
+          <h3>세계시민교육, 교류와 체험을 넘어 공동탐구와 글쓰기로</h3>
+          <p>16개 시도교육감 공약을 12개 정책영역으로 재분류하고, 국제교류·세계시민교육 정책이 약속하는 성과의 언어를 분석한다.</p>
+          <div class="paper-actions">
+            <a class="download" href="https://drive.google.com/uc?export=download&amp;id=1mADYMooi9gcKJOPO2XjqbGqhcDtQRyCI" target="_blank" rel="noopener">PDF 다운로드</a><a class="drive" href="https://drive.google.com/file/d/1mADYMooi9gcKJOPO2XjqbGqhcDtQRyCI/view" target="_blank" rel="noopener">Drive에서 보기</a>
+          </div>
+        </div>
+        <div class="keynote-main">
+          <div class="metric-row">
+            <div class="metric"><strong>11 / 16</strong><span>국제교류·세계시민교육을 주요 정책축으로 제시</span></div>
+            <div class="metric"><strong>5개 간극</strong><span>기회-학습, 접촉-상호성, 의제-삶, 활동-증거, 기회-형평성</span></div>
+            <div class="metric"><strong>3층 지표</strong><span>참여·산출 → 학습증거 → 형평성·지속가능성</span></div>
+          </div>
+          <p><b>핵심 판단:</b> 국제성의 강도와 세계시민학습의 깊이는 같은 축이 아니다. 프로그램 수와 참여 인원을 유지하더라도, 공동문제·다중관점·의미협상·공동저술·공공적 제안을 설계해야 만남이 연대의 학습으로 전환된다.</p>
+          <p><b>제안 절차:</b></p>
+          <ol>
+            <li>공동질문 설정</li><li>근거와 관점 탐구</li><li>의미협상과 조정</li><li>공동저술</li><li>실제 독자를 향한 공공적 제안</li><li>성찰과 다음 행동으로의 전이</li>
+          </ol>
+        </div>
+      </article>
+    </section>
+
+    <section id="papers">
+      <div class="section-head">
+        <div><h2>발표문 요약</h2></div>
+        <p>검색과 세션 필터를 이용해 연구 질문, 방법, 핵심 결과와 한계를 빠르게 비교할 수 있다.</p>
+      </div>
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="제목·저자·키워드 검색" aria-label="발표문 검색">
+        <select id="sessionFilter" aria-label="세션 필터">
+          <option value="all">전체 세션</option><option value="s11">세션1 1분과</option><option value="s12">세션1 2분과</option><option value="s13">세션1 3분과</option><option value="s21">세션2 1분과</option><option value="s22">세션2 2분과</option><option value="s23">세션2 3분과</option>
+        </select>
+      </div>
+      <div class="papers" id="paperGrid">
+
+        <article class="paper-card" data-session="s11" data-keywords="AI 리터러시 한국어 문화교육 상호문화 TBL 외국인 유학생 장현정 문희진">
+          <div class="paper-top"><div><span class="badge">세션1 1분과</span><h3>AI 리터러시 기반 한국어 문화교육 교수·학습 모형 개발</h3><p class="authors">장현정 · 문희진</p></div></div>
+          <div class="badges"><span class="badge design">설계·개발 연구</span><span class="badge progress">초기 모형 / 진행 중</span></div>
+          <dl><dt>질문</dt><dd>AI 리터러시와 상호문화교육을 TBL 구조 안에서 어떻게 결합할 것인가.</dd><dt>방법</dt><dd>이론·선행연구 기반 초기 모형, 전문가 3인 검토, 20명 수강 교과 적용을 계획한 DDR.</dd><dt>핵심</dt><dd>학습자=최종 판단, AI=탐색·표현 비계, 동료=관점 비교 자원으로 역할을 구분한다. TBL 4단계에 초기 해석·관점 확장·선택·문화 비교·편향 점검·재구성·성찰을 연결한다.</dd></dl>
+          <details><summary>연구실 메모와 한계</summary><p>현재 발표문은 초기 모형이 중심이며 전문가 검토와 현장 적용 결과는 후속 보완 대상으로 적혀 있다. 참여자 최종 수가 ‘#명’으로 남아 있어 효과 검증 결과로 인용하면 안 된다. 대신 AI 활용 이전의 선이해 형성, 선택 이유 기록, 팀 단위 검토라는 설계 원리는 다른 과제에 전이 가능하다.</p></details>
+          <div class="paper-actions"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1jeywRbuzUOagrwH1ZTOMXSyuYXzLH4eB" target="_blank" rel="noopener">PDF 다운로드</a><a class="drive" href="https://drive.google.com/file/d/1jeywRbuzUOagrwH1ZTOMXSyuYXzLH4eB/view" target="_blank" rel="noopener">Drive에서 보기</a></div>
+        </article>
+
+        <article class="paper-card" data-session="s11" data-keywords="중국인 대학원생 연구계획서 장르 지식 AI 학술 글쓰기 안정영 민정호">
+          <div class="paper-top"><div><span class="badge">세션1 1분과</span><h3>중국인 대학원생 연구계획서의 장르 지식과 AI 활용</h3><p class="authors">안정영 · 민정호</p></div></div>
+          <div class="badges"><span class="badge empirical">텍스트 20편 실증 분석</span></div>
+          <dl><dt>자료</dt><dd>중국인 석사과정생이 한국어로 작성한 인문계열 연구계획서 20편.</dd><dt>방법</dt><dd>Tardy의 형식·내용·수사·과정 지식을 25개 코드로 조작화한 질적 내용분석.</dd><dt>결과</dt><dd>충실 실현 비율은 내용 78.3%, 수사 62.9%, 형식 53.0%, 과정 34.8%. 명시적 연구문제는 20편 모두에서 확인되지 않았다.</dd></dl>
+          <details><summary>연구실 메모와 한계</summary><p>AI는 선행연구 비교, 목적-문제-자료-방법 대응표, 절차·일정 초안, 인용 대응 점검에 쓸 수 있지만 출처 확인과 최종 판정은 학습자가 맡아야 한다. 인문계열 20편, 연구자 1인의 코딩과 전문가 1인의 검토이므로 일반화와 코더 신뢰도에 제한이 있다.</p></details>
+          <div class="paper-actions"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1hRpneHtMSLLhA7_WrzvOaJI0UAYhAeZx" target="_blank" rel="noopener">PDF 다운로드</a><a class="drive" href="https://drive.google.com/file/d/1hRpneHtMSLLhA7_WrzvOaJI0UAYhAeZx/view" target="_blank" rel="noopener">Drive에서 보기</a></div>
+        </article>
+
+        <article class="paper-card" data-session="s12" data-keywords="사회정서학습 SEL 과학영재 자기표현 글쓰기 감성 분석 김형성">
+          <div class="paper-top"><div><span class="badge">세션1 2분과</span><h3>SEL 기반 자기표현적 글쓰기와 과학영재의 정서</h3><p class="authors">김형성</p></div></div>
+          <div class="badges"><span class="badge empirical">에세이 89편 분석</span><span class="badge">딥러닝 감성 분석</span></div>
+          <dl><dt>자료</dt><dd>A지역 영재학교 1학년 89명의 수정 완료 에세이.</dd><dt>결과</dt><dd>가장 높은 평균 감정은 깨달음(.629). 긍정 전환 47명, 미약 16명, 부정 방향 26명. 서사는 대체로 문제 제시-부정 경험 직면-의미 재구성의 흐름을 보였다.</dd><dt>해석</dt><dd>부정 감정의 존재를 실패로 보지 않고 감정의 언어화와 원인 규명, 의미 재구성 자체를 사회정서학습의 성과로 본다.</dd></dl>
+          <details><summary>연구실 메모와 한계</summary><p>온라인 댓글 말뭉치로 학습된 감성 모델이 학생 에세이 문체를 충분히 반영하는지 검증이 필요하다. 과학영재 단일 집단이라 일반화가 제한되며, 발표문 참고문헌에는 ‘추후 보완 예정’이 표시되어 있다.</p></details>
+          <div class="paper-actions"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1Od_nXy6fuHmuuuqhA5AIpOxZpqxvtCFO" target="_blank" rel="noopener">PDF 다운로드</a><a class="drive" href="https://drive.google.com/file/d/1Od_nXy6fuHmuuuqhA5AIpOxZpqxvtCFO/view" target="_blank" rel="noopener">Drive에서 보기</a></div>
+        </article>
+
+        <article class="paper-card" data-session="s12" data-keywords="후기 중등교육 청소년 AI 리터러시 저자성 쓰기 효능감 최진영">
+          <div class="paper-top"><div><span class="badge">세션1 2분과</span><h3>후기 중등교육 청소년의 AI 리터러시 인식과 저자성</h3><p class="authors">최진영</p></div></div>
+          <div class="badges"><span class="badge empirical">혼합 연구</span><span class="badge">N=391</span></div>
+          <dl><dt>자료</dt><dd>4개 고등학교 391명의 설문과 8개 주사례·2개 보충사례의 초고, 프롬프트, 수정 기록, 최종 글.</dd><dt>결과</dt><dd>AI 리터러시 자기인식과 쓰기 효능감은 정적 상관(r=.605, p&lt;.001). 그러나 높은 자기인식도 책임 있는 저자성 수행을 보장하지 않았다.</dd><dt>평가축</dt><dd>내용 생성 기여, 과정 주도, 선택 이유의 설명 가능성, AI 기여 구별과 결과 책임을 함께 봐야 한다.</dd></dl>
+          <details><summary>연구실 메모와 한계</summary><p>완성된 활동지의 유창성만으로 학습자 판단을 평가하기 어렵다는 점이 핵심이다. AI 대화와 수정 결과를 대조하고, 핵심 선택을 학생이 구두 또는 글로 설명하게 해야 한다. 질적 사례 수가 적고 학교별 기록 범위가 달라 부정행위 빈도나 인식-수행 관계를 일반화할 수 없다.</p></details>
+          <div class="paper-actions"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1OT9sgFPlqfx1IDT-A3Gtm4eI2C9JqoAA" target="_blank" rel="noopener">PDF 다운로드</a><a class="drive" href="https://drive.google.com/file/d/1OT9sgFPlqfx1IDT-A3Gtm4eI2C9JqoAA/view" target="_blank" rel="noopener">Drive에서 보기</a></div>
+        </article>
+
+        <article class="paper-card" data-session="s13" data-keywords="자기결정성 대학생 긍정적 쓰기 정서 ESM 자율성 유능성 관계성 천해주">
+          <div class="paper-top"><div><span class="badge">세션1 3분과</span><h3>자기결정성 이론과 대학생의 긍정적 쓰기 정서</h3><p class="authors">천해주</p></div></div>
+          <div class="badges"><span class="badge empirical">경험표집법</span><span class="badge">296회 응답</span></div>
+          <dl><dt>자료</dt><dd>신입생 54명, 한 학기 ESM 응답 296건. 긍정 응답 228건을 중심으로 분석하고 개인 비교는 52명.</dd><dt>결과</dt><dd>기쁨 34.6%, 성취감 20.2%. 욕구는 유능성 50.0%, 관계성 35.5%, 자율성 33.8%. 자율성-유능성 공존은 χ²(1)=4.038, p=.044.</dd><dt>시사점</dt><dd>자율성은 주제 선택만이 아니라 문제를 진단하고 과정을 조정하는 권한이다. 관계성은 쓰기 초반에 강하고 후반으로 갈수록 감소했다.</dd></dl>
+          <details><summary>연구실 메모와 한계</summary><p>자율성 고경험 집단의 87.0%가 유능성 고경험 집단에 포함됐다. 다만 단일 대학 신입생 표본이며 간이화된 ESM 설계다. 욕구 지지 교수법을 설계할 때 초반의 동료·교수자 상호작용과 과정 중 작은 성취의 가시화를 분리해 배치할 만하다.</p></details>
+          <div class="paper-actions"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1yyUkvnn09Ligr1Th6bCgP3nY0FYZ5mGK" target="_blank" rel="noopener">PDF 다운로드</a><a class="drive" href="https://drive.google.com/file/d/1yyUkvnn09Ligr1Th6bCgP3nY0FYZ5mGK/view" target="_blank" rel="noopener">Drive에서 보기</a></div>
+        </article>
+
+        <article class="paper-card" data-session="s13" data-keywords="인생연대표 대학생 정체성 성찰 에세이 서사적 통합 이연정">
+          <div class="paper-top"><div><span class="badge">세션1 3분과</span><h3>인생연대표 작성과 대학생 필자의 정체성 인식</h3><p class="authors">이연정</p></div></div>
+          <div class="badges"><span class="badge empirical">사전·사후 + 텍스트</span><span class="badge">수렴적 타당화</span></div>
+          <dl><dt>자료</dt><dd>5개 분반, 사전 설문 123명·사후 101명, 실제 텍스트 분석 44편.</dd><dt>결과</dt><dd>서사적 통합 +.395, 미래확신·일관성 +.216, 자기인식 +.169, 자기수용·주체성 +.133.</dd><dt>모형</dt><dd>인생곡선으로 객관화 → 은유·페르소나 인터뷰로 통찰 → 결정적 장면 중심 성찰 에세이로 서사적 주체화.</dd></dl>
+          <details><summary>연구실 메모와 한계</summary><p>개인 단위 사전·사후 설문과 에세이 매칭이 불가능해 인과추론 대신 두 자료원이 같은 방향을 보이는지 확인했다. AI 의존도 자가보고 10% 초과 글은 텍스트 분석에서 제외했다. 서사적 통합의 상승을 수업 효과로 단정하기보다 후속 추적 설계가 필요하다.</p></details>
+          <div class="paper-actions"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1WUEGjbINMXkYHO4_GVBPDLEEqTZ_wQOI" target="_blank" rel="noopener">PDF 다운로드</a><a class="drive" href="https://drive.google.com/file/d/1WUEGjbINMXkYHO4_GVBPDLEEqTZ_wQOI/view" target="_blank" rel="noopener">Drive에서 보기</a></div>
+        </article>
+
+        <article class="paper-card" data-session="s21" data-keywords="문화충돌 상호문화적 이해 외국인 유학생 다문화 대학 박혜란">
+          <div class="paper-top"><div><span class="badge">세션2 1분과</span><h3>문화충돌에서 상호문화적 이해로</h3><p class="authors">박혜란</p></div></div>
+          <div class="badges"><span class="badge empirical">기말보고서 72편</span><span class="badge">질적 분석</span></div>
+          <dl><dt>맥락</dt><dd>K대학 외국인 유학생 81명이 참여한 다문화 교실, 제출자 72명의 기말 보고서.</dd><dt>준거</dt><dd>Bennett의 문화간 감수성 발달모형과 Deardorff의 상호문화역량 과정모형.</dd><dt>결과</dt><dd>문화지식 확장, 맥락적 재해석, 자기 문화 기준의 상대화와 자문화 재인식, 타문화 관점 수용과 상호적 소통 지향이 중첩되어 나타났다.</dd></dl>
+          <details><summary>연구실 메모와 한계</summary><p>문화 접촉·적응과 상호문화적 이해를 구분한 점이 강점이다. 보고서가 변화 서술을 의무화하지 않았으므로 명시되지 않은 변화는 추정하지 않았다. 단일 교과목·사후 산출물 분석이라 수업 효과나 발달 단계를 판정하는 자료는 아니다.</p></details>
+          <div class="paper-actions"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1Lr8cDdHkyErgF9L7Rcjsf6AI0ypOEFJ_" target="_blank" rel="noopener">PDF 다운로드</a><a class="drive" href="https://drive.google.com/file/d/1Lr8cDdHkyErgF9L7Rcjsf6AI0ypOEFJ_/view" target="_blank" rel="noopener">Drive에서 보기</a></div>
+        </article>
+
+        <article class="paper-card" data-session="s21" data-keywords="효 심청전 웹툰 외국인 학습자 상호문화 AI 투닝 권미경">
+          <div class="paper-top"><div><span class="badge">세션2 1분과</span><h3>효(孝)의 다시 쓰기: 『심청전』 AI 웹툰 각색</h3><p class="authors">권미경</p></div></div>
+          <div class="badges"><span class="badge empirical">프로젝트 산출물 분석</span></div>
+          <dl><dt>맥락</dt><dd>K대학 외국인 학습자 수업, 2025-2·2026-1, 3주간 10컷 웹툰 제작. 웹툰과 활동지를 질적 분석.</dd><dt>결과</dt><dd>효의 의미는 희생·보은, 돌봄·가족 연대, 자기희생을 넘어선 상호 존중·개인 성장의 세 양상으로 재구성됐다.</dd><dt>의미</dt><dd>학습자는 한국 가치를 고정 규범으로 재현하지 않고 자문화 서사와 현대적 가치로 재맥락화했다.</dd></dl>
+          <details><summary>연구실 메모와 한계</summary><p>AI 웹툰 도구는 문화 해석을 시각적 콘텐츠로 만드는 매개였다. 다만 참여자 수와 개인 변인별 차이가 본문에서 충분히 제시되지 않았고, 사전·사후 문화 이해 변화도 측정하지 않았다. 결과물의 질을 역량 변화와 동일시하면 안 된다.</p></details>
+          <div class="paper-actions"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1evV1RGXaVTGcYgXuHgfCnVtxzeX2q1NZ" target="_blank" rel="noopener">PDF 다운로드</a><a class="drive" href="https://drive.google.com/file/d/1evV1RGXaVTGcYgXuHgfCnVtxzeX2q1NZ/view" target="_blank" rel="noopener">Drive에서 보기</a></div>
+        </article>
+
+        <article class="paper-card" data-session="s22" data-keywords="어린이 시민 헌법 미래세대 보호 초등 사회과 논쟁문제 조현기">
+          <div class="paper-top"><div><span class="badge">세션2 2분과</span><h3>어린이 시민, 헌법을 쓰다</h3><p class="authors">조현기</p></div></div>
+          <div class="badges"><span class="badge design">개념적 설계 분석</span></div>
+          <dl><dt>쟁점</dt><dd>미래세대 보호를 헌법에 명문화할 것인지, 법률·절차로 보완할 것인지, 현행 유지 또는 판단 유보를 선택할 것인지.</dd><dt>방법</dt><dd>6차시 지도안·학습지·문형의 지시문과 제출 조건을 대조하고 반례를 적용한 개념 분석.</dd><dt>핵심</dt><dd>토론에서 허용한 이견이 최종 과제 형식에서도 정당한 결과로 인정되어야 한다. 수정뿐 아니라 판단 유지에도 반론 검토의 이유를 요구한다.</dd></dl>
+          <details><summary>연구실 메모와 한계</summary><p>‘보호에 동의함’과 ‘헌법 조항 신설에 동의함’을 분리한 설계가 핵심이다. 어린이의 발언을 진지하게 검토하면서도 미출생자의 선호를 대표하는 한계를 명시하게 한다. 학습 효과는 아직 실행 연구 전 단계다.</p></details>
+          <div class="paper-actions"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1ExbI24E6cBVVI7mvr0gPy2_TH8Wkmwep" target="_blank" rel="noopener">PDF 다운로드</a><a class="drive" href="https://drive.google.com/file/d/1ExbI24E6cBVVI7mvr0gPy2_TH8Wkmwep/view" target="_blank" rel="noopener">Drive에서 보기</a></div>
+        </article>
+
+        <article class="paper-card" data-session="s22" data-keywords="다중언어 초등 행위주체성 그림책 멘토링 김미소 계승어 중국어">
+          <div class="paper-top"><div><span class="badge">세션2 2분과</span><h3>다중언어그림책 창작 멘토링과 행위주체성</h3><p class="authors">김미소</p></div></div>
+          <div class="badges"><span class="badge empirical">단일 사례 적용</span><span class="badge progress">슬라이드 기반 요약</span></div>
+          <dl><dt>대상</dt><dd>한국 출생, 중국 국적 9세 다중언어 아동 1명과 부모·동급생 4명.</dd><dt>프로그램</dt><dd>20회기: 동기 형성, 주제·인물·구조 결정, 한국어 창작, 퇴고, AI 번역과 가정 검토, 출간 발표, 성찰.</dd><dt>변화</dt><dd>자기혐오→자기이해, 수동성→능동성, 순응→저항, 언어의 암기 대상→소통 자원, 독자→다중언어 작가라는 변화가 면담·발화에 나타났다.</dd></dl>
+          <details><summary>연구실 메모와 한계</summary><p>학습자의 선택권, 부모의 계승어 자원, 동료 독자, 실제 출간이라는 사회적 관계망이 행위주체성을 지지한다. 단일 사례이며 PDF의 상당 부분이 이미지 슬라이드라 추출 가능한 방법 정보가 제한적이었다. 변화의 지속성과 다른 사례로의 전이 검증이 필요하다.</p></details>
+          <div class="paper-actions"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1HnKHSC2euws34v3T4AWYPBWjsMEDVmqc" target="_blank" rel="noopener">PDF 다운로드</a><a class="drive" href="https://drive.google.com/file/d/1HnKHSC2euws34v3T4AWYPBWjsMEDVmqc/view" target="_blank" rel="noopener">Drive에서 보기</a></div>
+        </article>
+
+        <article class="paper-card" data-session="s23" data-keywords="이물 설화 타자화 다시 쓰기 반쪽이 구렁덩덩신선비 설운장군 너구리 사위 강민경">
+          <div class="paper-top"><div><span class="badge">세션2 3분과</span><h3>이물(異物) 설화의 타자화 양상과 다시 쓰기 교육</h3><p class="authors">강민경</p></div></div>
+          <div class="badges"><span class="badge design">텍스트 분석 + 수업 모형</span></div>
+          <dl><dt>대상</dt><dd>〈반쪽이〉, 〈구렁덩덩신선비〉, 〈설운장군〉, 〈너구리 사위〉.</dd><dt>주장</dt><dd>타자화는 존재의 차이에서 자동 발생하지 않고 시선, 소문, 공동체와 권력의 판단을 거쳐 형성된다.</dd><dt>모형</dt><dd>읽고 분석하기 → 여러 인물의 위치에서 공감하기 → 시점·사건·결말에 개입해 다시 쓰기.</dd></dl>
+          <details><summary>연구실 메모와 한계</summary><p>공존의 결말을 정답으로 강요하지 않고 거리 유지, 새 공동체 형성, 배제의 지속 등 선택의 결과를 서사로 검토하게 한다. ‘창작자의 말’로 변경 지점과 이유를 설명하게 한 점은 저자성 평가와 연결된다. 실제 적용 결과는 아직 제시되지 않았다.</p></details>
+          <div class="paper-actions"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1xDhuxPnXy72ZMfcQ8cCWl8-xoJZN1PS7" target="_blank" rel="noopener">PDF 다운로드</a><a class="drive" href="https://drive.google.com/file/d/1xDhuxPnXy72ZMfcQ8cCWl8-xoJZN1PS7/view" target="_blank" rel="noopener">Drive에서 보기</a></div>
+        </article>
+
+        <article class="paper-card" data-session="s23" data-keywords="LLM 요약 비판적 읽기 상황모델 의미 평탄화 타자의 가설 장동민 오현지">
+          <div class="paper-top"><div><span class="badge">세션2 3분과</span><h3>LLM 요약에 대한 비판적 읽기 교수·학습 모형</h3><p class="authors">장동민 · 오현지</p></div></div>
+          <div class="badges"><span class="badge design">DDR 유형 2</span><span class="badge progress">검증 예정</span></div>
+          <dl><dt>개념</dt><dd>LLM 요약은 독자의 상황모델을 대신하는 정답이 아니라 원문과 대조할 ‘타자의 가설’이다.</dd><dt>절차</dt><dd>원문 읽기 → 상황모델 구성 → 독자 요약으로 외재화 → LLM 요약의 검토적 수용 → 상황모델 점검·수정.</dd><dt>준거</dt><dd>조건·관점·양태·범위·불확실성이 매끄럽게 단순화되는 ‘의미 평탄화’를 의미 차원 9개와 변형 방식 8개로 판별한다.</dd></dl>
+          <details><summary>연구실 메모와 한계</summary><p>교수자 5인 요구분석을 바탕으로 초기 모형을 구성했다. 전문가 타당화와 교육대 1학년 11명 대상 4차시 예비 적용은 후속 단계로 제시되어 현재 결과가 아니다. 장점은 사실 오류가 없는 자연스러운 요약도 의미 관계 손실의 관점에서 검토하게 한다는 점이다.</p></details>
+          <div class="paper-actions"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1FTOlja3xNT-H7rnFdSJsxbOJWr8CIfjy" target="_blank" rel="noopener">PDF 다운로드</a><a class="drive" href="https://drive.google.com/file/d/1FTOlja3xNT-H7rnFdSJsxbOJWr8CIfjy/view" target="_blank" rel="noopener">Drive에서 보기</a></div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="matrix">
+      <div class="section-head"><div><h2>연구별 근거 현황</h2></div><p>표본 수와 함께 자료의 종류, 분석 설계, 결과 완료 여부를 정리했습니다.</p></div>
+      <div class="matrix-wrap">
+        <table>
+          <thead><tr><th>자료</th><th>연구 성격</th><th>핵심 자료</th><th>현재 말할 수 있는 것</th><th>주의</th></tr></thead>
+          <tbody>
+            <tr><td>기조강연</td><td>탐색적 정책문서 분석</td><td>16개 시도교육감 공약</td><td>정책 언어와 성과지표의 구조</td><td>정책 효과·시도 간 우열 아님</td></tr>
+            <tr><td>AI 한국어 문화교육</td><td>DDR 초기 모형</td><td>이론·선행연구, 적용 계획</td><td>설계 원리와 절차</td><td>현장 결과 미완료</td></tr>
+            <tr><td>중국인 대학원생</td><td>질적 내용분석</td><td>연구계획서 20편</td><td>장르 요소의 실현 분포</td><td>단일 전공권·코더 독립성 제한</td></tr>
+            <tr><td>SEL 과학영재</td><td>텍스트 분석</td><td>에세이 89편</td><td>정서 분포·서사 궤적</td><td>감성 모델의 도메인 적합성</td></tr>
+            <tr><td>청소년 AI 저자성</td><td>혼합 연구</td><td>설문 391명 + 사례 10건</td><td>자기인식 상관과 수행의 불일치</td><td>상관·사례를 발생률로 해석 금지</td></tr>
+            <tr><td>자기결정성 쓰기 정서</td><td>ESM + 질적 코딩</td><td>54명·296회 응답</td><td>긍정 정서의 맥락과 욕구 공존</td><td>단일 대학·경계선 통계</td></tr>
+            <tr><td>인생연대표</td><td>사전·사후 + 텍스트</td><td>123/101명, 44편</td><td>두 자료원의 수렴 방향</td><td>개인 매칭 부재, 인과추론 불가</td></tr>
+            <tr><td>문화충돌</td><td>질적 내용분석</td><td>기말보고서 72편</td><td>이해와 재해석의 양상</td><td>사후 보고서만으로 변화 추정 금지</td></tr>
+            <tr><td>효 다시 쓰기</td><td>프로젝트 산출물 분석</td><td>웹툰·활동지</td><td>가치문화 재구성 유형</td><td>참여자·사전사후 정보 제한</td></tr>
+            <tr><td>어린이 헌법</td><td>개념적 설계 분석</td><td>6차시 지도안·학습지</td><td>과제 논리와 이견 수용 조건</td><td>학습자 적용 전</td></tr>
+            <tr><td>다중언어그림책</td><td>단일 사례 프로그램</td><td>아동·가족·동료 발화</td><td>행위주체성 변화의 사례</td><td>일반화·지속성 검증 제한</td></tr>
+            <tr><td>이물 설화</td><td>텍스트 분석 + 설계</td><td>설화 4편</td><td>타자화 분석과 3단계 모형</td><td>실제 적용 전</td></tr>
+            <tr><td>LLM 요약</td><td>DDR 초기 모형</td><td>이론 + 교수자 5인 요구분석</td><td>의미 평탄화 준거와 절차</td><td>전문가·수업 검증 예정</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="downloads">
+      <div class="section-head"><div><h2>파일 이용 안내</h2></div></div>
+      <article class="panel summary">
+        <ul>
+          <li><b>HTML만 배포하는 경우:</b> 각 카드의 ‘PDF 다운로드’ 버튼은 Google Drive 원문을 사용합니다. 수신자에게 원본 파일 접근 권한이 있어야 합니다.</li>
+          <li><b>오프라인으로 배포하는 경우:</b> 이 HTML과 <code>pdfs</code> 폴더를 같은 위치에 두거나, 함께 제공된 ZIP 파일을 공유합니다.</li>
+          <li><b>분석 기준일:</b> 2026년 9월 18일입니다. 발표문에 ‘진행 중’, ‘추후 보완’으로 표시된 내용은 해당 상태를 유지했습니다.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer><div class="footer-inner"><p>작문학회 학술발표대회 자료 요약</p><p class="small">요약 내용은 원문을 대체하지 않습니다. 인용 전에는 각 PDF의 문맥과 참고문헌을 확인해 주십시오.</p></div></footer>
+
+  <script>
+    const search = document.getElementById('search');
+    const filter = document.getElementById('sessionFilter');
+    const cards = [...document.querySelectorAll('.paper-card')];
+    function applyFilters() {
+      const q = search.value.trim().toLowerCase();
+      const s = filter.value;
+      cards.forEach(card => {
+        const hay = (card.textContent + ' ' + card.dataset.keywords).toLowerCase();
+        const matchQ = !q || hay.includes(q);
+        const matchS = s === 'all' || card.dataset.session === s;
+        card.classList.toggle('hidden', !(matchQ && matchS));
+      });
+    }
+    search.addEventListener('input', applyFilters);
+    filter.addEventListener('change', applyFilters);
+  </script>
+</body>
+</html>
