@@ -1,0 +1,103 @@
+
+:root {
+  --navy: #17335c;
+  --blue: #4b8fd8;
+  --white: #ffffff;
+  --radius: 18px;
+  --max: 1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"KoPubWorld Dotum","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  background:var(--white);
+  color:var(--navy);
+  line-height:1.7;
+  font-size:17px;
+  word-break:keep-all;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(var(--max), calc(100% - 32px)); margin:0 auto}
+.topbar{
+  border-bottom:2px solid var(--blue);
+  background:var(--white);
+  position:sticky; top:0; z-index:20;
+}
+.topbar .inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.brand{display:flex;align-items:center;gap:14px;font-weight:800;font-size:1.02rem}
+.brand img{width:44px;height:44px;object-fit:contain}
+.home-link{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:2px solid var(--navy);border-radius:999px;font-weight:700;background:var(--white)}
+.hero{
+  padding:44px 0 28px;
+}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:center}
+.hero-card,.card,.page-card,.list-card,.paper-card,.notice{
+  border:2px solid var(--blue);
+  border-radius:var(--radius);
+  background:var(--white);
+}
+.hero-card{padding:34px}
+.hero h1{margin:0 0 14px;font-size:2rem;line-height:1.32}
+.hero p{margin:0;font-size:1.05rem}
+.hero-visual{padding:18px;display:flex;align-items:center;justify-content:center}
+.hero-visual img{max-height:320px;object-fit:contain}
+.section{padding:20px 0 8px}
+.section h2{margin:0 0 16px;font-size:1.45rem}
+.muted{opacity:.82}
+.index-list{display:grid;gap:18px;margin:18px 0 44px}
+.card-link{display:block}
+.card{
+  display:grid;grid-template-columns:180px 1fr 140px;gap:20px;align-items:center;
+  padding:22px;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.card:hover{transform:translateY(-2px)}
+.card-date{font-weight:800;font-size:1.1rem;border-right:2px solid var(--blue);padding-right:18px}
+.card h3{margin:0 0 8px;font-size:1.28rem}
+.card p{margin:0}
+.card .arrow{justify-self:end;font-weight:800;color:var(--blue)}
+.card-mascot{position:relative;overflow:hidden}
+.card-mascot::after{content:"";position:absolute;right:10px;bottom:10px;width:68px;height:68px;background:url('../img/cheongrami.png') center/contain no-repeat;opacity:.16}
+.page-head{padding:34px 0 16px}
+.page-title-wrap{display:grid;grid-template-columns:1fr 220px;gap:24px;align-items:center}
+.page-head h1{margin:0 0 10px;font-size:1.85rem;line-height:1.34}
+.page-head p{margin:0}
+.page-badge{display:inline-block;padding:8px 14px;border:2px solid var(--blue);border-radius:999px;font-weight:700;margin-bottom:12px}
+.quick-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.quick-links a,.button{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border:2px solid var(--navy);border-radius:999px;font-weight:700;background:var(--white)}
+.button.blue{border-color:var(--blue);color:var(--white);background:var(--blue)}
+.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.page-card{padding:24px}
+.page-card h3{margin:0 0 12px;font-size:1.18rem}
+.page-card ul{margin:0;padding-left:20px}
+.page-card li+li{margin-top:8px}
+.info-strip{display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;margin:16px 0 28px}
+.info-item{padding:18px;border:2px solid var(--blue);border-radius:16px;text-align:center;font-weight:700}
+.papers{display:grid;gap:16px}
+.paper-card{padding:22px}
+.paper-card h3{margin:0 0 10px;font-size:1.16rem;line-height:1.45}
+.paper-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.badge{display:inline-flex;padding:6px 10px;border:2px solid var(--blue);border-radius:999px;font-weight:700;font-size:.92rem}
+.paper-card p{margin:0 0 10px}
+.paper-card .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+footer{margin-top:38px;border-top:2px solid var(--blue);padding:22px 0 36px}
+footer p{margin:0 0 6px}
+.small{font-size:.95rem}
+.pdf-embed{width:100%;height:760px;border:2px solid var(--blue);border-radius:16px}
+.table-wrap{overflow:auto;border:2px solid var(--blue);border-radius:16px}
+table{width:100%;border-collapse:collapse;min-width:720px}
+th,td{padding:14px 16px;border-bottom:1px solid var(--blue);text-align:left;vertical-align:top}
+th{background:var(--white);font-size:1rem}
+tr:last-child td{border-bottom:none}
+.notice{padding:18px 20px}
+@media (max-width: 900px){
+  body{font-size:16px}
+  .hero-grid,.summary-grid,.two-col,.page-title-wrap{grid-template-columns:1fr}
+  .card{grid-template-columns:1fr;gap:12px}
+  .card-date{border-right:none;border-bottom:2px solid var(--blue);padding-right:0;padding-bottom:10px}
+  .card .arrow{justify-self:start}
+  .info-strip{grid-template-columns:1fr}
+}
