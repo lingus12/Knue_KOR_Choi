@@ -4,65 +4,44 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>학술자료실 | 한국교원대학교 국어교육과_최숙기교수님연구실</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="한국교원대학교 국어교육과 최숙기 교수님 연구실의 학술대회 자료실">
+  <link rel="icon" type="image/png" href="assets/img/knue_logo.png">
+  <link rel="stylesheet" href="assets/css/style.css?v=readable-2">
 </head>
-<body>
+<body class="index-page">
+  <a class="skip-link" href="#main">본문 바로가기</a>
   <header class="topbar">
     <div class="container inner">
-      <div class="brand">
-        <img src="assets/img/knue_logo.png" alt="한국교원대학교 마크">
-        <span>한국교원대학교 국어교육과_최숙기교수님연구실</span>
-      </div>
+      <a class="brand" href="index.html" aria-label="학술자료실 첫 화면">
+        <img src="assets/img/knue_logo.png" alt="KNUE 한국교원대학교" width="36" height="36">
+      </a>
     </div>
   </header>
-
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-card card-mascot">
-        <h1>학술자료실</h1>
-        <p>방문자는 <strong>열린 날짜와 학회명</strong>을 보고 원하는 학회로 들어가 자료를 살펴볼 수 있습니다.</p>
-        <p style="margin-top:12px">첫 화면은 단순하게 구성하고, 상세 내용은 각 학회 페이지에서 확인하도록 분리했습니다.</p>
-      </div>
-      <div class="hero-visual card">
-        <img src="assets/img/cheongrami.png" alt="청라미 캐릭터">
-      </div>
+  <main id="main" class="container">
+    <div class="archive-intro">
+      <h1>학술자료실</h1>
+      <p class="lab-name">한국교원대학교 국어교육과_<wbr>최숙기교수님연구실</p>
     </div>
-  </section>
-
-  <main class="container">
-    <section class="section">
-      <h2>열린 학회</h2>
-      <div class="index-list">
-        <a class="card-link" href="pages/hwabeop-53.html">
-          <article class="card card-mascot">
-            <div class="card-date">2026.09.19</div>
-            <div>
-              <h3>제53회 한국화법학회 전국학술대회</h3>
-              <p class="muted">주제: 소통을 위한 언어와 비언어의 사용</p>
-            </div>
-            <div class="arrow">자료 보기 →</div>
-          </article>
-        </a>
-
-        <a class="card-link" href="pages/jakmun-summary.html">
-          <article class="card card-mascot">
-            <div class="card-date">개최일 미확인</div>
-            <div>
-              <h3>작문학회 학술발표대회 자료 요약</h3>
-              <p class="muted">기조강연과 발표문 요약을 한 화면에서 살펴보는 자료실</p>
-            </div>
-            <div class="arrow">자료 보기 →</div>
-          </article>
-        </a>
-      </div>
-    </section>
+    <nav aria-label="학술대회 자료 목록">
+      <div class="conference-columns" aria-hidden="true"><span>개최일</span><span>학술대회</span><span></span></div>
+      <ul class="conference-list">
+        <li>
+          <a class="conference-link" href="pages/hwabeop-53.html">
+            <time class="conference-date" datetime="2026-09-19">2026.09.19</time>
+            <span class="conference-name">제53회 한국화법학회 전국학술대회</span>
+            <span class="conference-open"><span class="open-label">자료 보기</span><span aria-hidden="true">→</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="conference-link" href="pages/jakmun-summary.html">
+            <span class="conference-date undated">개최일 미확인</span>
+            <span class="conference-name">작문학회 학술발표대회</span>
+            <span class="conference-open"><span class="open-label">자료 보기</span><span aria-hidden="true">→</span></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="archive-tail" aria-hidden="true"><span class="cheongrami-decoration"></span></div>
   </main>
-
-  <footer>
-    <div class="container">
-      <p><strong>한국교원대학교 국어교육과_최숙기교수님연구실</strong></p>
-      <p class="small">학교 마크와 청라미 이미지를 활용한 분리형 웹사이트 구조입니다.</p>
-    </div>
-  </footer>
 </body>
 </html>
