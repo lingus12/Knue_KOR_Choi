@@ -160,6 +160,33 @@ tr:last-child td { border-bottom: 0; }
 .footer-home { display: inline-flex; align-items: center; gap: 16px; min-height: 44px; flex: 0 0 auto; font-size: 13px; text-decoration: none; }
 .footer-home:hover { text-decoration: underline; }
 
+/* An overview of every presentation, grouped by the conference program. */
+.presentation-index-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.presentation-index-heading h2 { margin-bottom: 8px; }
+.presentation-index-heading > span { color: var(--muted); font-size: 13px; white-space: nowrap; }
+.index-help { margin: 0 0 20px; color: var(--muted); font-size: 14px; }
+.presentation-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 16px; }
+.presentation-groups .toc-group { padding: 0; border: 1px solid var(--rule); border-radius: 18px; overflow: hidden; background: white; }
+.toc-group-wide { grid-column: 1 / -1; }
+.toc-group h3 { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0; padding: 15px 18px; background: var(--wash); color: var(--navy); font-size: 16px; font-weight: 700; line-height: 1.6; }
+.toc-group h3 > span { flex: 0 0 auto; padding: 1px 7px; border-radius: 6px; color: var(--blue); background: white; font-size: 12px; }
+.toc-group ol { list-style: none; margin: 0; padding: 0 18px; }
+.toc-group-wide ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
+.toc-group-single ol { grid-template-columns: 1fr; }
+.toc-group li, .jakmun-page .toc-group li { margin: 0; border-bottom: 1px solid var(--rule); }
+.toc-group li:last-child { border-bottom: 0; }
+.toc-group a { display: flex; align-items: baseline; gap: 10px; min-height: 62px; padding: 13px 0; color: var(--ink); text-decoration: none; }
+.toc-number { flex: 0 0 auto; color: var(--blue); font-size: 11px; font-variant-numeric: tabular-nums; font-weight: 700; }
+.toc-entry { flex: 1; min-width: 0; }
+.toc-title { display: block; font-size: 14px; font-weight: 600; line-height: 1.65; }
+.toc-author { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.toc-arrow { flex: 0 0 auto; color: var(--blue); font-size: 16px; }
+.toc-group a:hover .toc-title { color: var(--blue); text-decoration: underline; text-underline-offset: 4px; }
+.toc-group a:focus-visible { outline-offset: -2px; border-radius: 8px; }
+.paper-card:target, .jakmun-page .paper:target { border-color: var(--blue); box-shadow: 0 0 0 3px rgb(3 81 156 / 8%); }
+.paper-toc-back, .paper-actions .paper-toc-back { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; margin-left: auto; padding: 8px 10px; border: 0; background: transparent; color: var(--muted); font-size: 13px; text-decoration: none; }
+.paper-toc-back:hover { color: var(--blue); text-decoration: underline; }
+
 @media (max-width: 900px) {
   .archive-hero { grid-template-columns: 1fr 235px; padding: 36px; gap: 20px; }
   .hero-art .mascot-frame { width: 210px; }
@@ -245,6 +272,13 @@ tr:last-child td { border-bottom: 0; }
   .footer-inner .character-credit { font-size: 11px; }
   .footer-home { margin: 10px 0 0 50px; }
   .back-to-top { right: 18px; bottom: max(16px, env(safe-area-inset-bottom)); }
+  .presentation-groups { grid-template-columns: 1fr; gap: 12px; }
+  .toc-group-wide ol { grid-template-columns: 1fr; }
+  .toc-group h3 { padding: 13px 16px; font-size: 15px; }
+  .toc-group ol { padding-inline: 16px; }
+  .toc-group a { gap: 8px; }
+  .toc-title { font-size: 14px; }
+  .index-help { font-size: 13px; }
 }
 @media (max-width: 374px) {
   .container, .wrap { width: calc(100% - 28px); }
